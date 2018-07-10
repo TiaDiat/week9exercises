@@ -38,20 +38,74 @@
 // console.log(myDogs);
 // //has 4 strings left
 
+//create a new and empty array
 var oneArray = [];
 
+//Create a function which will run when the button is clicked. This function should add the value of the input to your empty array. THEN, your function should effectively loop through your array and append each item inside a list item to the unordered list in your HTML.
+
+var myList = document.getElementsByTagName("ul")[0];
+
 function postName() {
-	
 	var userName = document.getElementById("userName").value;
-	oneArray.push(userName);
-	console.log(oneArray);
-
+	//push the value of the input into the empty array
+		oneArray.push(userName);
+	//empty the list first
+		myList.innerHTML = "";
 	for (var i=0; i < oneArray.length; i++) {
-		var li = document.createElement("li")
-		li.textContent = oneArray[i];
+		//create a list item
+		var newLi = document.createElement("li");
+		//add the strings into the list-items
+		newLi.innerText = oneArray[i];
+		// append the list-itm to the list
+		// var ul = document.getElementById("list");
+		// ul.appendChild(li);
+		myList.appendChild(newLi);
+	}
+}
 
-		var ul = document.getElementById("list");
-		ul.appendChild(li);
+function postAlphabetical() {
+	oneArray.sort()
+	myList.innerHTML = "";
+		for (var i=0; i < oneArray.length; i++) {
+		//create a list item
+		var newLi = document.createElement("li");
+		//add the strings into the list-items
+		newLi.innerText = oneArray[i];
+		// append the list-itm to the list
+		// var ul = document.getElementById("list");
+		// ul.appendChild(li);
+		myList.appendChild(newLi);
+	}
+}
 
-	};
-};
+function postRemoveLast() {
+	oneArray.pop()
+	myList.innerHTML = "";
+		for (var i=0; i < oneArray.length; i++) {
+		//create a list item
+		var newLi = document.createElement("li");
+		//add the strings into the list-items
+		newLi.innerText = oneArray[i];
+		// append the list-itm to the list
+		// var ul = document.getElementById("list");
+		// ul.appendChild(li);
+		myList.appendChild(newLi);
+	}
+}
+
+function postRemoveFirst() {
+	oneArray.shift()
+	myList.innerHTML = "";
+		for (var i=0; i < oneArray.length; i++) {
+		//create a list item
+		var newLi = document.createElement("li");
+		//add the strings into the list-items
+		newLi.innerText = oneArray[i];
+		// append the list-itm to the list
+		// var ul = document.getElementById("list");
+		// ul.appendChild(li);
+		myList.appendChild(newLi);
+	}
+}
+
+	
