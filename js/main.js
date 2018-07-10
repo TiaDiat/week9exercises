@@ -56,9 +56,7 @@ function postName() {
 		var newLi = document.createElement("li");
 		//add the strings into the list-items
 		newLi.innerText = oneArray[i];
-		// append the list-itm to the list
-		// var ul = document.getElementById("list");
-		// ul.appendChild(li);
+		// append the list-item to the list
 		myList.appendChild(newLi);
 	}
 }
@@ -71,9 +69,7 @@ function postAlphabetical() {
 		var newLi = document.createElement("li");
 		//add the strings into the list-items
 		newLi.innerText = oneArray[i];
-		// append the list-itm to the list
-		// var ul = document.getElementById("list");
-		// ul.appendChild(li);
+		// append the list-item to the list
 		myList.appendChild(newLi);
 	}
 }
@@ -86,9 +82,7 @@ function postRemoveLast() {
 		var newLi = document.createElement("li");
 		//add the strings into the list-items
 		newLi.innerText = oneArray[i];
-		// append the list-itm to the list
-		// var ul = document.getElementById("list");
-		// ul.appendChild(li);
+		// append the list-item to the list
 		myList.appendChild(newLi);
 	}
 }
@@ -101,9 +95,7 @@ function postRemoveFirst() {
 		var newLi = document.createElement("li");
 		//add the strings into the list-items
 		newLi.innerText = oneArray[i];
-		// append the list-itm to the list
-		// var ul = document.getElementById("list");
-		// ul.appendChild(li);
+		// append the list-item to the list
 		myList.appendChild(newLi);
 	}
 }
